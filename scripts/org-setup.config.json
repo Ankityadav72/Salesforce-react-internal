@@ -1,0 +1,9 @@
+{
+  "permsetAssignments": {
+    "assignments": {
+      "reactinternal_Access": {
+        "assignee": "currentUser"
+      }
+    }
+  }
+}

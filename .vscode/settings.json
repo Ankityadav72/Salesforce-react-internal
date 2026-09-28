@@ -1,0 +1,7 @@
+{
+    "xml.preferences.showSchemaDocumentationType": "none",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.removeUnusedImports": "always"
+    }
+}
