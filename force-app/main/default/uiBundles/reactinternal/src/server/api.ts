@@ -7,12 +7,11 @@ import type {
 import { ACCOUNTS_QUERY, CONTACTS_QUERY, OPPORTUNITIES_QUERY } from "./query";
 
 let sdkPromise: ReturnType<typeof createDataSDK> | undefined;
-const getSdk = () => (sdkPromise ??= createDataSDK());
+export const getSdk = () => (sdkPromise ??= createDataSDK());
 
 async function runQuery<K extends string, N>(query: string, objectName: K, first: number): Promise<N[]> {
     const sdk = await getSdk();
     const result = await sdk.graphql?.query<Connection<K, N>>({ query, variables: { first } });
-
     if (!result) throw new Error("GraphQL isn't available in this environment");
     if (result.errors?.length) throw new Error(result.errors.map((e) => e.message).join(", "));
     return result.data?.uiapi.query[objectName]?.edges.map((e) => e.node) ?? [];

@@ -5,8 +5,9 @@
       "default": true
     }
   ],
-  "name": "MyProject",
+  "name": "reactInternal",
   "namespace": "",
   "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "67.0"
+  "sourceApiVersion": "67.0",
+  "defaultLwcLanguage": "typescript"
 }

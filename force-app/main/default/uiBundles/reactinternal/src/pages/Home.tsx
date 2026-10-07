@@ -1,4 +1,4 @@
-import type { ComponentType } from "react";
+import { type ComponentType } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui";
 import useTabs from "./hooks/use-tabs";
 import AccountsTable from "./tables/accounts-table";
@@ -8,7 +8,6 @@ import OpportunitiesTable from "./tables/opportunities-table";
 export const TABS = ["Accounts", "Contacts", "Opportunities"] as const;
 export type TabName = (typeof TABS)[number];
 
-// Adding a tab to TABS without a component here is a type error
 const TAB_PANELS: Record<TabName, ComponentType> = {
 	Accounts: AccountsTable,
 	Contacts: ContactsTable,
