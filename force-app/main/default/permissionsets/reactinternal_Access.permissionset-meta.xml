@@ -10,4 +10,8 @@
         <enabled>true</enabled>
         <name>ApiEnabled</name>
     </userPermissions>
+    <classAccesses>
+        <apexClass>AccountApi</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
 </PermissionSet>

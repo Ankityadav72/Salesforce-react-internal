@@ -25,6 +25,8 @@
     "dev:preview": "node scripts/org-setup-dev.mjs"
   },
   "dependencies": {
+    "@salesforce/platform-sdk": "^12.8.0",
+    "@salesforce/vite-plugin-ui-bundle": "^12.8.0",
     "fast-xml-parser": "^5.9.3",
     "zod": "^3.24.1"
   },
